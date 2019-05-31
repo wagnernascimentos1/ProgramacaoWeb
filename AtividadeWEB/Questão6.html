@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Questão 6 - Métodos HTTP </title>
+  </head>
+  <body>
+    <h1> Métodos HTTP </h1>
+    <h2> 1. Método GET </h2>
+    <p> Recuperar informação. As solicitações GET devem ser <b>seguras e idempotentes</b>, ou seja,
+      independentemente de quantas vezes ela se repete com os mesmos parâmetros, os resultados
+      são os mesmos. </p>
+
+      <p> <b> Eles podem ter efeitos colaterais</b>, mas o usuário não os espera, portanto
+      não podem ser críticos para a operação do sistema. As solicitações também podem ser parciais
+      ou condicionais. </p>
+
+      <p> O método GET <b> utiliza a própria URL para enviar dados ao servidor</b>, quando enviamos um
+        formulário pelo método GET, o navegador pega as informações do formulário e coloca junto
+        com a URL de onde o formulário vai ser enviado e envia,  separando o endereço da URI dos
+        dados do formulário por um “?” (ponto de interrogação).</p>
+
+      <h2> 2. Método POST </h2>
+      <p>  Solicita que um recurso na URL, <b>permite que faça alguma coisa com a entidade fornecida</b>.
+        Geralmente, o POST é usado para criar uma nova entidade, mas também pode ser usado para atualizar
+        uma entidade.</p>
+
+        <h2> 3. Método PUT </h2>
+
+        <p> Armazena uma <b>entidade</b> em uma URL. PUT pode criar uma nova entidade ou atualizar uma
+          existente. </p>
+          <p> <b>Uma solicitação PUT é idempotente</b>. Idempotência é a principal diferença entre as expectativas
+          de PUT e uma solicitação POST.</p>
+          <p> Quando usamos POST, os dados vão no corpo da requisição e não na URL.
+      Uma requisição por meio desse método sempre requer que as informações submetidas sejam <b> incluídas no
+      corpo da mensagem e formatadas como uma query string</b>, além de conter cabeçalhos adicionais especificando
+      seu tamanho e seu formato. </p>
+
+      <h2> 4. Método DELETE </h2>
+
+      <p> <b>Solicitar que um recurso seja removido</b>; no entanto, o recurso não precisa ser removido
+        imediatamente.
+         Pode ser um pedido assíncrono ou de longa duração. </p>
+
+  </body>
+</html>

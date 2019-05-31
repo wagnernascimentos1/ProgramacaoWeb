@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Página de Cadastro do Estudante</title>
+  </head>
+  <body>
+    <h1>CADASTRO DOS ALUNOS</h1>
+    <h4>Preencha os campos:</h4>
+    <main>
+      <form action="http://localhost:5000/aluno" method="POST">
+        <label for="nome">Nome</label>
+        <input type="text" name="Nome" required>
+        <br>
+        <label for="nome">Nascimento</label>
+        <input type="text" name="Nascimento" required>
+        <br>
+        <label for="matricula">Matricula</label>
+        <input type="text" name="Matricula" required>
+        <br>
+        <label for="cpf">CPF</label>
+        <input type="text" name="CPF" required>
+        <br>
+        <input type="submit" value="CADASTRAR">
+
+      </form>
+    </main>
+  </body>
+</html>
