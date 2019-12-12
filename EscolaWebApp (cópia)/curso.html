@@ -1,0 +1,32 @@
+<div class="container">
+  <form name="cursoForm">
+      <!-- Nome -->
+      <div class="form-group">
+        <label for='nome'>Nome:</label>
+        <input type='text' ng-model='curso.nome' name='nome' class="form-control" required ng-minlength="5" ng-maxlength="45">
+        <div ng-show="cursoForm.nome.$error.required && cursoForm.nome.$dirty" class="alert alert-danger">
+          Por favor, insira o nome do seu curso!
+        </div>
+        <div ng-show="cursoForm.nome.$error.minlength && cursoForm.nome.$dirty" class="alert alert-danger">
+          O nome do curso deve ter no mínimo 5 letras
+        </div>
+        <div ng-show="cursoForm.nome.$error.maxlength && cursoForm.nome.$dirty" class="alert alert-danger">
+          O nome do curso deve ter no máximo 45 letras
+        </div>
+      </div>
+      <!-- Turno -->
+      <div class="form-group">
+        <label for='turno'>Turno:</label>
+        <input type='text' ng-model='curso.id_turno' name='turno' class="form-control" required ng-minlength="1" ng-maxlength="10">
+        <div ng-show="cursoForm.turno.$error.required && cursoForm.turno.$dirty" class="alert alert-danger">
+          Preencha o campo turno
+        </div>
+        <div ng-show="cursoForm.turno.$error.minlength && cursoForm.turno.$dirty" class="alert alert-danger">
+          O turno deve conter no mínimo 1 caracteres!
+        </div>
+        <div ng-show="cursoForm.turno.$error.maxlength && cursoForm.turno.$dirty" class="alert alert-danger">
+          O turno deve conter no máximo 4 caracteres!
+        </div>
+      </div>
+      <button ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block" ng-disabled="cursoForm.$invalid">Cadastrar</button>
+    </form>

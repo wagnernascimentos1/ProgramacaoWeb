@@ -1,0 +1,21 @@
+<div class="container">
+  <formname="turmaForm">
+
+      <div class="form-group">
+        <label for= 'nome'> Nome: </label>
+        <input type = 'text' name = 'nome' required ng-model="turma.nome" class="form-control" placeholder="nome">
+      </div>
+      <div ng-show="turmaForm.nome.$error.required && turmaForm.nome.$dirty" class="alert alert-danger">
+        Por favor, insira o nome da turma!
+      </div>
+      <div class="form-group">
+        <label for= 'id_curso'> Número de Identificação do Curso:</label>
+        <input type= 'text' name= 'id_curso' required ng-model="turma.id_curso" class="form-control" placeholder="fk_id_curso">
+      </div>
+      <div ng-show="turmaForm.fk_id_curso.$error.required && turmaForm.fk_id_curso.$dirty" class="alert alert-danger">
+        Por favor, insira o Número de Identificação do Curso da turma!
+      </div>
+
+      <button ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block" ng-disabled="turmaForm.$invalid">Cadastrar</button> <br>
+  </form>
+</div>

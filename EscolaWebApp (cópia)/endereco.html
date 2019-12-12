@@ -1,0 +1,46 @@
+<div class="container">
+    <form name="enderecoForm" >
+
+        <div class="form-group">
+          <label for= 'logradouro'> Logradouro: </label>
+          <input type = 'text' name='logradouro' class="form-control" ng-model="endereco.logradouro" placeholder="logradouro" required>
+        </div>
+        <div ng-show="enderecoForm.logradouro.$error.required && enderecoForm.logradouro.$dirty" class="alert alert-danger">
+          Por favor, insira o logradouro!
+        </div>
+
+        <div class="form-group">
+          <label for= 'complemento'> Complemento:</label>
+          <input type= 'text' name= 'complemento' class="form-control" ng-model="endereco.complemento" placeholder="complemento" required>
+        </div>
+        <div ng-show="enderecoForm.complemento.$error.required && enderecoForm.complemento.$dirty" class="alert alert-danger">
+          Por favor, insira o Complemento!
+        </div>
+
+        <div class="form-group">
+          <label for= 'bairro'> Bairro:</label>
+          <input type= 'text' name= 'bairro' class="form-control" ng-model="endereco.bairro" placeholder="bairro" required>
+        </div>
+        <div ng-show="enderecoForm.bairro.$error.required && enderecoForm.bairro.$dirty" class="alert alert-danger">
+          Por favor, insira o Bairro!
+        </div>
+
+        <div class="form-group">
+          <label for= 'cep'> Cep:</label>
+          <input type= 'text' name= 'cep' class="form-control" ng-model="endereco.cep" placeholder="cep" required>
+        </div>
+        <div ng-show="enderecoForm.cep.$error.required && enderecoForm.cep.$dirty" class="alert alert-danger">
+          Por favor, insira o CEP!
+        </div>
+
+        <div class="form-group">
+          <label for= 'numero'> Numero:</label>
+          <input type= 'text' name= 'numero' class="form-control" ng-model="endereco.numero" placeholder="numero" required>
+        </div>
+        <div ng-show="enderecoForm.numero.$error.required && enderecoForm.numero.$dirty" class="alert alert-danger">
+          Por favor, insira o logradouro!
+        </div>
+
+        <button ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block" ng-disabled="enderecoForm.$invalid">Cadastrar</button>
+      </form>
+  </div>

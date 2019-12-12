@@ -1,0 +1,21 @@
+<div class="container">
+  <form name="disciplinaForm">
+
+      <div class="form-group">
+        <label for= 'nome'> Nome: </label>
+        <input type = 'text' ng-model="disciplina.nome" required name = 'nome' class="form-control" placeholder="nome">
+      </div>
+      <div ng-show="disciplinaForm.nome.$error.required && disciplinaForm.nome.$dirty" class="alert alert-danger">
+        Por favor, insira o nome da Disciplina!
+      </div>
+      <div class="form-group">
+        <label for= 'id_professor'> Número de Identificação do professor:</label>
+        <input type= 'text' ng-model="disciplina.id_professor" required name= 'fk_id_professor' class="form-control" placeholder="fk_id_professor">
+      </div>
+      <div ng-show="disciplinaForm.fk_id_professor.$error.required && disciplinaForm.fk_id_professor.$dirty" class="alert alert-danger">
+        Por favor, insira o Número de Identificação do professor da Disciplina!
+      </div>
+
+      <button ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block" ng-disabled="disciplinaForm.$invalid">Cadastrar</button> <br>
+  </form>
+</div>

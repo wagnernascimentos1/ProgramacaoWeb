@@ -1,0 +1,32 @@
+<form class="formulario" name="campusform">
+  <div class="form-group">
+    <label for="sigla">Sigla: </label>
+    <input type="text" class="form-control" name="sigla" ng-model="campus.sigla" placeholder="Sigla" ng-required="true" ng-minlength="3">
+
+    <!-- ng-messages | campo sigla | 1st -->
+    <div ng-messages="campusform.sigla.$error" ng-if='campusform.sigla.$dirty'>
+      <div ng-message="required" class="alert alert-danger">
+        Por favor, preencha o campo sigla!
+      </div>
+      <div ng-message="minlength" class="alert alert-info">
+        O campo nome deve ter 3 caracteres. Exemplo: GBA.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="cidade">Cidade: </label>
+    <input type="text" class="form-control" name="cidade" ng-model="campus.cidade" placeholder="Cidade" ng-required="true" ng-minlength="5">
+
+    <!-- ng-messages | campo cidade | 2nd -->
+    <div ng-messages="campusform.cidade.$error" ng-if='campusform.cidade.$dirty'>
+      <div ng-message="required" class="alert alert-danger">
+        Por favor, preencha o campo cidade!
+      </div>
+      <div ng-message="minlength" class="alert alert-info">
+        O campo nome deve ter no mínimo 10 caracteres.
+      </div>
+    </div>
+  </div>
+  <button ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block" ng-disabled="campusForm.$invalid">Cadastrar</button>
+
+</form>

@@ -1,0 +1,30 @@
+<div class="container">
+  <form name="escolaForm">
+
+        <div class="form-group">
+          <label for= 'nome'> Nome: </label>
+          <input type = 'text' name = 'nome' class="form-control" required ng-model="escola.nome">
+        </div>
+        <div ng-show="escolaForm.nome.$error.required && escolaForm.nome.$dirty" class="alert alert-danger">
+          Por favor, insira o nome da Escola!
+        </div>
+
+        <div class="form-group">
+          <label for= 'id_endereço'> Número de Identificação do Endereço:</label>
+          <input type= 'text' name= 'fk_id_endereco' class="form-control"  required ng-model="escola.id_endereco">
+        </div>
+        <div ng-show="escolaForm.fk_id_endereco.$error.required && escolaForm.fk_id_endereco.$dirty" class="alert alert-danger">
+          Por favor, insira o Número de Identificação do Endereço da Escola!
+        </div>
+
+        <div class="form-group">
+          <label for= 'id_campus'>Número de Identificação do Campus:</label>
+          <input type= 'text' name= 'fk_id_campus' class="form-control"  required ng-model="escola.id_campus">
+        </div>
+        <div ng-show="escolaForm.fk_id_campus.$error.required && escolaForm.fk_id_campus.$dirty" class="alert alert-danger">
+          Por favor, insira o Número de Identificação do Campus da Escola!
+        </div>
+
+        <button ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block" ng-disabled="escolaForm.$invalid">Cadastrar</button>
+    </form>
+</div>

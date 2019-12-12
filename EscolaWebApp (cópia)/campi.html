@@ -1,0 +1,41 @@
+<form name="campiform">
+  <div class="form-group">
+    <label for="sigla">Sigla: </label>
+    <input type="text" class="form-control" name="sigla" ng-model="campi.sigla" placeholder="Sigla" ng-minlength="3">
+
+    <!-- ng-messages | campo sigla | 1st -->
+    <div ng-messages="campiform.sigla.$error" ng-if='campiform.sigla.$dirty'>
+      <div ng-message="minlength" class="alert alert-info">
+        O campo nome deve ter 3 caracteres. Exemplo: GBA.
+      </div>
+    </div>
+  </div>
+
+  <!-- Botões -->
+  <button type='reset' name='limpar' class="btn btn-secondary btn-lg btn-block">
+    Limpar
+  </button>
+  <button ng-click="listar()" class="btn btn-dark btn-lg btn-block">
+    Listar
+  </button>
+</form>
+
+<!-- Tabela de Campi -->
+<div>
+  <table class="table table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Sigla</th>
+        <th scope="col">Cidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="campus in campi">
+        <td scope="row">{{campus.id_campus}}</td>
+        <td scope="row">{{campus.sigla}}</td>
+        <td scope="row">{{campus.cidade}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

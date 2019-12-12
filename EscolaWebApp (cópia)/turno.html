@@ -1,0 +1,22 @@
+<div class="container">
+  <form name="turnoForm">
+    <div class="form-group">
+      <label for='nome'>Nome:</label>
+      <input type='text' ng-model='turno.nome' name='nome' class="form-control" required ng-minlength="3" ng-maxlength="10">
+
+      <div ng-show="turnoForm.nome.$error.required && turnoForm.nome.$dirty" class="alert alert-danger">
+        Por favor, insira o nome do seu turno!
+      </div>
+
+      <div ng-show="turnoForm.nome.$error.minlength && turnoForm.nome.$dirty" class="alert alert-danger">
+        O turno deve ter, no mínimo, 3 caracteres!
+      </div>
+
+      <div ng-show="turnoForm.nome.$error.maxlength && turnoForm.nome.$dirty" class="alert alert-danger">
+        O turno deve ter, no máximo, 10 caracteres!
+      </div>
+    </div>
+
+    <button ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block" ng-disabled="turnoForm.$invalid">Cadastrar</button> <br>
+  </form>
+</div>

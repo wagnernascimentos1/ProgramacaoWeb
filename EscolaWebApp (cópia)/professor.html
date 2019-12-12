@@ -1,0 +1,32 @@
+<div class="container">
+  <form name="professorForm">
+
+      <div class="form-group">
+        <label for= 'nome'> Nome: </label>
+        <input type = 'text' name ='nome' class="form-control" required ng-model="professor.nome" ng-minlength="3" ng-maxlength="25">
+      </div>
+      <div>
+        <div ng-show="professorForm.nome.$error.required && professorForm.nome.$dirty" class="alert alert-danger">
+          Por favor, preencha o campo Nome!
+        </div>
+        <div ng-show="professorForm.nome.$error.minlength" class="alert alert-info">
+          Atenção, o campo Nome deve ter o tamanho mínimo de 3 caracteres!
+        </div>
+        <div ng-show="professorForm.nome.$error.maxlength" class="alert alert-info">
+          Atenção, o campo Nome deve ter o tamanho máximo de 25 caracteres!
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for= 'id_endereco'> Número de Identificação do Endereço: </label>
+        <input type = 'text' name='fk_id_endereco' class="form-control" required ng-model="professor.id_endereco">
+      </div>
+      <div>
+        <div ng-show="professorForm.fk_id_endereco.$error.required && professorForm.fk_id_endereco.$dirty" class="alert alert-danger">
+          Por favor, preencha o campo FK_Endereço!
+        </div>
+      </div>
+
+      <button type='submit' name="Cadastrar" ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block" ng-disabled="professorForm.$invalid">Cadastrar</button> <br>
+  </form>
+</div>

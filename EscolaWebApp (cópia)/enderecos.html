@@ -1,0 +1,46 @@
+<form  name="enderecoform">
+  <div class="form-group">
+    <label for="nome">Logradouro: </label>
+    <input type="text" class="form-control" name="logradouro" ng-model="endereco.logradouro" placeholder="Logradouro" ng-minlength="10"/>
+
+    <!-- ng-messages | campo logradouro | 1st -->
+    <div ng-messages="enderecoform.logradouro.$error" ng-if='enderecoform.logradouro.$dirty'>
+      <div ng-message="minlength" class="alert alert-info">
+        O campo nome deve ter no mínimo 10 caracteres.
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <button type='reset' name='limpar' class="btn btn-secondary btn-lg btn-block">
+      Limpar
+    </button>
+    <button ng-click="listar()" class="btn btn-dark btn-lg btn-block">
+      Listar
+    </button>
+  </form>
+
+  <!-- Tabela de Alunos -->
+  <div>
+    <table class="table table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Código</th>
+          <th scope="col">Logradouro</th>
+          <th scope="col">Complemento</th>
+          <th scope="col">Bairro</th>
+          <th scope="col">Cep</th>
+          <th scope="col">Número</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="endereco in enderecos">
+          <td scope="row">{{endereco.id_endereco}}</td>
+          <td scope="row">{{endereco.logradouro}}</td>
+          <td scope="row">{{endereco.complemento}}</td>
+          <td scope="row">{{endereco.bairro}}</td>
+          <td scope="row">{{endereco.cep}}</td>
+          <td scope="row">{{endereco.numero}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

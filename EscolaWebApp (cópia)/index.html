@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html ng-app="EscolaWebApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Página Inicial</title>
+
+    <!-- Estilo -->
+		<link rel="stylesheet" type="text/css" href="CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="CSS/menu.css">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+
+    <!-- AngularJs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-messages.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+    <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+
+    <!-- Moments -->
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--EscolaWebApp - Aplicação Angular -->
+    <script src="js/app.js" type="text/javascript"></script>
+
+    <!--Controllers-->
+    <script src="js/controller/HomeController.js" type="text/javascript"></script>
+
+    <script src="js/controller/AlunoController.js" type="text/javascript"></script>
+    <script src="js/controller/AlunosController.js" type="text/javascript"></script>
+
+    <script src="js/controller/CampiController.js" type="text/javascript"></script>
+    <script src="js/controller/CampusController.js" type="text/javascript"></script>
+
+    <script src="js/controller/CursoController.js" type="text/javascript"></script>
+    <script src="js/controller/CursosController.js" type="text/javascript"></script>
+
+    <script src="js/controller/DisciplinaController.js" type="text/javascript"></script>
+    <script src="js/controller/DisciplinasController.js" type="text/javascript"></script>
+
+    <script src="js/controller/EnderecoController.js" type="text/javascript"></script>
+    <script src="js/controller/EnderecosController.js" type="text/javascript"></script>
+
+    <script src="js/controller/EscolaController.js" type="text/javascript"></script>
+    <script src="js/controller/EscolasController.js" type="text/javascript"></script>
+
+    <script src="js/controller/ProfessorController.js" type="text/javascript"></script>
+    <script src="js/controller/ProfessoresController.js" type="text/javascript"></script>
+
+    <script src="js/controller/TurmaController.js" type="text/javascript"></script>
+    <script src="js/controller/TurmasController.js" type="text/javascript"></script>
+
+    <script src="js/controller/TurnoController.js" type="text/javascript"></script>
+    <script src="js/controller/TurnosController.js" type="text/javascript"></script>
+
+
+    <!--Factorys-->
+    <script src="js/factory/AlunoFactory.js" type="text/javascript"></script>
+    <script src="js/factory/CampusFactory.js" type="text/javascript"></script>
+    <script src="js/factory/CursoFactory.js" type="text/javascript"></script>
+    <script src="js/factory/DisciplinaFactory.js" type="text/javascript"></script>
+    <script src="js/factory/EnderecoFactory.js" type="text/javascript"></script>
+    <script src="js/factory/EscolaFactory.js" type="text/javascript"></script>
+    <script src="js/factory/ProfessorFactory.js" type="text/javascript"></script>
+    <script src="js/factory/TurmaFactory.js" type="text/javascript"></script>
+    <script src="js/factory/TurnoFactory.js" type="text/javascript"></script>
+
+    <!--Router-->
+    <script src="js/router/router.js" type="text/javascript"></script>
+    <script src="js/router/state.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <div class="meu-container">
+      <header>
+
+
+        <nav class="navbar navbar-expand-lg navigation">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon white">=</span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" ui-sref="home">Página Inicial</a>
+              <a class="nav-item nav-link" ui-sref="aluno">Aluno</a>
+              <a class="nav-item nav-link" ui-sref="endereco">Endereço</a>
+              <a class="nav-item nav-link" ui-sref="escola">Escola</a>
+              <a class="nav-item nav-link" ui-sref="professor">Professor</a>
+              <a class="nav-item nav-link" ui-sref="campus">Campus</a>
+              <a class="nav-item nav-link" ui-sref="turno">Turno</a>
+              <a class="nav-item nav-link" ui-sref="curso">Curso</a>
+              <a class="nav-item nav-link" ui-sref="disciplina">Disciplina</a>
+              <a class="nav-item nav-link" ui-sref="turma">Turma</a>
+            </div>
+
+          </div>
+        </nav>
+      </header>
+      <main>
+        <ui-view></ui-view>
+      </main>
+      <footer>
+        <div class="col-12">
+          <h3>Informações adicionais</h3>
+          </a>
+        </div>
+        <div class="col-12">
+          <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> Projeto Integrado - Odaliene e Wagner</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

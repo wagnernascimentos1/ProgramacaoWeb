@@ -1,0 +1,43 @@
+<form name="turnoform">
+  <div class="form-group">
+    <label for="nome">Turno: </label>
+    <input type="text" class="form-control" name="nome" ng-model="turno.nome" placeholder="Nome" ng-minlength="5"/>
+
+    <!-- ng-messages | campo nome | 1st -->
+    <div ng-messages="turnoform.nome.$error" ng-if='turnoform.nome.$dirty'>
+			<div ng-message="required" class="alert alert-danger">
+				Por favor, preencha o campo nome!
+			</div>
+			<div ng-message="minlength" class="alert alert-info">
+				O campo nome deve ter no mínimo 5 caracteres.
+			</div>
+		</div>
+  </div>
+
+  <!-- Botões -->
+  <button type='reset' name='limpar' class="btn btn-secondary btn-lg btn-block">
+    Limpar
+  </button>
+  <button ng-click="listar()" class="btn btn-dark btn-lg btn-block">
+    Listar
+  </button>
+</form>
+
+<!-- Tabela de Alunos -->
+<div>
+  <table class="table table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="turno in turnos">
+        <td scope="row">{{turno.id_turno}}</td>
+        <td scope="row">{{turno.nome}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
